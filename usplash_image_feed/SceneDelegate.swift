@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  usplash_image_feed
-//
-//  Created by Влад Миронов on 24.01.2025.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
