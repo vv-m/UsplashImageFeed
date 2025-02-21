@@ -31,10 +31,10 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNe-5p-cHF">
-                                                    <rect key="frame" x="333" y="4" width="44" height="44"/>
+                                                    <rect key="frame" x="335" y="4" width="42" height="42"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="44" id="XOu-WX-VP0"/>
-                                                        <constraint firstAttribute="height" constant="44" id="x3J-54-u2E"/>
+                                                        <constraint firstAttribute="width" constant="42" id="XOu-WX-VP0"/>
+                                                        <constraint firstAttribute="height" constant="42" id="x3J-54-u2E"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" image="Active">
@@ -42,7 +42,7 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.01.2025" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsN-Ey-eXW">
-                                                    <rect key="frame" x="24" y="190" width="152" height="18"/>
+                                                    <rect key="frame" x="24" y="194" width="152" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="152" id="Vs9-Qq-0lC"/>
                                                         <constraint firstAttribute="height" constant="18" id="fNd-dS-IX3"/>
@@ -53,10 +53,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="XsN-Ey-eXW" secondAttribute="bottom" constant="16" id="BGO-51-XkO"/>
+                                                <constraint firstItem="c8H-se-D4V" firstAttribute="bottom" secondItem="XsN-Ey-eXW" secondAttribute="bottom" constant="8" id="GHG-cL-dlS"/>
                                                 <constraint firstAttribute="trailing" secondItem="tNe-5p-cHF" secondAttribute="trailing" constant="16" id="JJO-Xb-LFM"/>
+                                                <constraint firstItem="XsN-Ey-eXW" firstAttribute="leading" secondItem="c8H-se-D4V" secondAttribute="leading" constant="8" id="P1T-ut-BkO"/>
                                                 <constraint firstItem="c8H-se-D4V" firstAttribute="top" secondItem="db2-jf-i6E" secondAttribute="top" constant="4" id="VjA-vr-IRu"/>
-                                                <constraint firstItem="XsN-Ey-eXW" firstAttribute="leading" secondItem="db2-jf-i6E" secondAttribute="leading" constant="24" id="c8c-NS-LRB"/>
                                                 <constraint firstItem="tNe-5p-cHF" firstAttribute="top" secondItem="db2-jf-i6E" secondAttribute="top" constant="4" id="f3B-Ht-i07"/>
                                                 <constraint firstAttribute="trailing" secondItem="c8H-se-D4V" secondAttribute="trailing" constant="16" id="fOU-Ep-gRo"/>
                                                 <constraint firstItem="c8H-se-D4V" firstAttribute="leading" secondItem="db2-jf-i6E" secondAttribute="leading" constant="16" id="hYH-AF-d6d"/>

@@ -66,6 +66,7 @@ extension ImagesListViewController: UITableViewDataSource {
         cell.cellImage.layer.masksToBounds = true
         cell.backgroundColor = UIColor(named: "UsplashAppBlack") ?? .systemBlue
         cell.dataLabel.text = dateFormatter.string(from: Date())
+        cell.selectionStyle = .none
         if indexPath.row % 2 == 0 {
             cell.likeButtom.setImage(UIImage(named: "No Active"), for: .normal)
         } else {
