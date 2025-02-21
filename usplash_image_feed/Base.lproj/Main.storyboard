@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -36,10 +37,9 @@
                                                         <constraint firstAttribute="width" constant="42" id="XOu-WX-VP0"/>
                                                         <constraint firstAttribute="height" constant="42" id="x3J-54-u2E"/>
                                                     </constraints>
-                                                    <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" image="Active">
-                                                        <color key="baseBackgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </buttonConfiguration>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="Active"/>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24.01.2025" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsN-Ey-eXW">
                                                     <rect key="frame" x="24" y="194" width="152" height="18"/>
@@ -51,12 +51,24 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7aZ-70-M9f">
+                                                    <rect key="frame" x="16" y="190" width="361" height="30"/>
+                                                    <color key="backgroundColor" red="0.9162352573988477" green="1" blue="0.97130213605473237" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="uam-p7-q2I"/>
+                                                    </constraints>
+                                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="7aZ-70-M9f" firstAttribute="trailing" secondItem="c8H-se-D4V" secondAttribute="trailing" id="3q6-pW-fik"/>
                                                 <constraint firstItem="c8H-se-D4V" firstAttribute="bottom" secondItem="XsN-Ey-eXW" secondAttribute="bottom" constant="8" id="GHG-cL-dlS"/>
                                                 <constraint firstAttribute="trailing" secondItem="tNe-5p-cHF" secondAttribute="trailing" constant="16" id="JJO-Xb-LFM"/>
                                                 <constraint firstItem="XsN-Ey-eXW" firstAttribute="leading" secondItem="c8H-se-D4V" secondAttribute="leading" constant="8" id="P1T-ut-BkO"/>
+                                                <constraint firstItem="7aZ-70-M9f" firstAttribute="width" secondItem="c8H-se-D4V" secondAttribute="width" id="QNU-pD-vZz"/>
                                                 <constraint firstItem="c8H-se-D4V" firstAttribute="top" secondItem="db2-jf-i6E" secondAttribute="top" constant="4" id="VjA-vr-IRu"/>
+                                                <constraint firstItem="7aZ-70-M9f" firstAttribute="bottom" secondItem="c8H-se-D4V" secondAttribute="bottom" id="cep-7H-6xG"/>
+                                                <constraint firstItem="7aZ-70-M9f" firstAttribute="leading" secondItem="c8H-se-D4V" secondAttribute="leading" id="cuM-8Z-Ham"/>
                                                 <constraint firstItem="tNe-5p-cHF" firstAttribute="top" secondItem="db2-jf-i6E" secondAttribute="top" constant="4" id="f3B-Ht-i07"/>
                                                 <constraint firstAttribute="trailing" secondItem="c8H-se-D4V" secondAttribute="trailing" constant="16" id="fOU-Ep-gRo"/>
                                                 <constraint firstItem="c8H-se-D4V" firstAttribute="leading" secondItem="db2-jf-i6E" secondAttribute="leading" constant="16" id="hYH-AF-d6d"/>
@@ -68,8 +80,9 @@
                                             <outlet property="bottomConstraint" destination="mg9-VE-jqa" id="VWE-1m-iCy"/>
                                             <outlet property="cellImage" destination="c8H-se-D4V" id="Qhq-sL-cA9"/>
                                             <outlet property="dataLabel" destination="XsN-Ey-eXW" id="GGK-zb-i4u"/>
+                                            <outlet property="gradientView" destination="7aZ-70-M9f" id="mJ0-O7-Xgp"/>
                                             <outlet property="leadingConstraint" destination="hYH-AF-d6d" id="Ft5-5v-Kiu"/>
-                                            <outlet property="likeButtom" destination="tNe-5p-cHF" id="KzX-je-sr1"/>
+                                            <outlet property="likeButton" destination="tNe-5p-cHF" id="KzX-je-sr1"/>
                                             <outlet property="topConstraint" destination="VjA-vr-IRu" id="G2R-Ob-Syb"/>
                                             <outlet property="trailingConstraint" destination="fOU-Ep-gRo" id="kzd-nt-mqq"/>
                                         </connections>

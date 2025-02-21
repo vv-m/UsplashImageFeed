@@ -40,10 +40,10 @@ extension ImagesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ImagesListCell.reuseIdentifier) as? ImagesListCell,
-                  let image = UIImage(named: photosName[indexPath.row]),
-                  image.size.width > 0 else {
-                return 200
-            }
+              let image = UIImage(named: photosName[indexPath.row]),
+              image.size.width > 0 else {
+            return 200
+        }
         
         let verticalInsets = cell.topConstraint.constant + cell.bottomConstraint.constant
         let horizontalInsets = cell.trailingConstraint.constant + cell.leadingConstraint.constant
@@ -57,10 +57,10 @@ extension ImagesListViewController: UITableViewDataSource {
     }
     
     
-    func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
+    private func configCell(for cell: ImagesListCell, with indexPath: IndexPath) {
         guard let image = UIImage(named: photosName[indexPath.row]) else {
-                    return
-                }
+            return
+        }
         cell.cellImage.image = image
         cell.cellImage.layer.cornerRadius = 16
         cell.cellImage.layer.masksToBounds = true
@@ -68,9 +68,9 @@ extension ImagesListViewController: UITableViewDataSource {
         cell.dataLabel.text = dateFormatter.string(from: Date())
         cell.selectionStyle = .none
         if indexPath.row % 2 == 0 {
-            cell.likeButtom.setImage(UIImage(named: "No Active"), for: .normal)
+            cell.likeButton.setImage(UIImage(named: "No Active"), for: .normal)
         } else {
-            cell.likeButtom.setImage(UIImage(named: "Active"), for: .normal)
+            cell.likeButton.setImage(UIImage(named: "Active"), for: .normal)
         }
     }
 }
