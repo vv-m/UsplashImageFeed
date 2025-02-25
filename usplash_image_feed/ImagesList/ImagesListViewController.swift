@@ -13,7 +13,6 @@ class ImagesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = UIColor(named: "UsplashAppBlack") ?? .systemBlue
@@ -68,9 +67,9 @@ extension ImagesListViewController: UITableViewDataSource {
         cell.dataLabel.text = dateFormatter.string(from: Date())
         cell.selectionStyle = .none
         if indexPath.row % 2 == 0 {
-            cell.likeButton.setImage(UIImage(named: "No Active"), for: .normal)
+            cell.likeButton.setImage(UIImage(named: "Like No Active"), for: .normal)
         } else {
-            cell.likeButton.setImage(UIImage(named: "Active"), for: .normal)
+            cell.likeButton.setImage(UIImage(named: "Like Active"), for: .normal)
         }
     }
 }
