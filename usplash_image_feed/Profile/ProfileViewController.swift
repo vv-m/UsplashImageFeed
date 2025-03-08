@@ -1,12 +1,11 @@
 import UIKit
 
-class ProfileViewController: UIViewController {
+final class ProfileViewController: UIViewController {
     private var photo: UIImageView!
     private var nameUserLabel: UILabel!
     private var loginUserLabel: UILabel!
     private var textUserLabel: UILabel!
     private var exitButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +59,7 @@ class ProfileViewController: UIViewController {
         textUserLabel.text = "Hello, world!"
         textUserLabel.textColor = .white
         textUserLabel.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-
+        
         textUserLabel.leadingAnchor.constraint(equalTo: photo.leadingAnchor).isActive = true
         textUserLabel.topAnchor.constraint(equalTo: loginUserLabel.bottomAnchor, constant: 8).isActive = true
     }
