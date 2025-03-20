@@ -62,21 +62,35 @@ extension WebViewViewController: WKNavigationDelegate {
     }
     
     private func code(from navigationAction: WKNavigationAction) -> String? {
-        if
-            let url = navigationAction.request.url,                         //1
-            let urlComponents = URLComponents(string: url.absoluteString),  //2
-            urlComponents.path == "/oauth/authorize/native",                //3
-            let items = urlComponents.queryItems,                           //4
-            let codeItem = items.first(where: { $0.name == "code" })        //5
-        {
-            let code_value = codeItem.value
-            print("Код авторизации \(code_value)")
-            return codeItem.value                                           //6
-        } else {
-            print("Код авторизации не найден")
+        guard let url = navigationAction.request.url else {
+            print("Условие 1 не выполнено: URL не найден")
             return nil
         }
+        print("url \(url)")
+        
+        guard let urlComponents = URLComponents(string: url.absoluteString) else {
+            print("Условие 2 не выполнено: Невозможно создать URLComponents из URL")
+            return nil
+        }
+        print("url \(urlComponents)")
+        print("url \(urlComponents.path)")
+        guard urlComponents.path == "/oauth/authorize/native" else {
+            print("Условие 3 не выполнено: Путь URL не соответствует '/oauth/authorize/native'")
+            return nil
+        }
+        
+        guard let items = urlComponents.queryItems else {
+            print("Условие 4 не выполнено: Нет queryItems в URLComponents")
+            return nil
+        }
+        
+        guard let codeItem = items.first(where: { $0.name == "code" }) else {
+            print("Условие 5 не выполнено: queryItem с именем 'code' не найден")
+            return nil
+        }
+        
+        let code_value = codeItem.value
+        print("Код авторизации \(code_value)")
+        return codeItem.value
     }
 }
-
-
