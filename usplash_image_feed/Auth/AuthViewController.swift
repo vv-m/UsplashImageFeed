@@ -2,7 +2,7 @@ import UIKit
 
 final class AuthViewController: UIViewController {
     private let showWebViewSegueIdentifier = "ShowWebView"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +34,17 @@ final class AuthViewController: UIViewController {
 extension AuthViewController: WebViewViewControllerDelegate {
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
         //TODO: process code
+        print("Я получил код \(code)")
+        vc.dismiss(animated: true)
+        
+        // Закрываем WebViewController через навигационный контроллер
+        if let navigationController = navigationController {
+            navigationController.popViewController(animated: true)
+        } else {
+            vc.dismiss(animated: true)
+        }
     }
-
+    
     func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
         vc.dismiss(animated: true)
     }
